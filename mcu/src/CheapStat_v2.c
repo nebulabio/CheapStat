@@ -70,17 +70,17 @@
 #include <avr/interrupt.h>
 #include "spi_driver.h"
 
-//structure to store the profile - 29 bytes
+//structure to store the profile
 typedef struct {
-	char name[15];
+	char name[16];
 	uint8_t type;
+	uint8_t curr_range;
 	int16_t op1;
 	int16_t op2;
 	int16_t op3;
 	int16_t op4;
 	int16_t op5;
 	int16_t op6;
-	uint8_t curr_range;
 } profile;
 
 //profiles are located in both EEPROM and RAM
